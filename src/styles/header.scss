@@ -1,0 +1,36 @@
+@use './../styles/constants.scss' as v;
+.header{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: v.$bg;
+    .header__logo{
+        color: #CCC;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    .header__logo:hover{
+        color: #fff;
+    }
+    .header__media{
+        display: flex;
+        gap: 30px;
+        .media__basket{
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all .3s ease;
+        }
+        .media__user{
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all .3s ease;
+        }
+        .media__basket:hover{
+            opacity: 1;
+        }
+        .media__user:hover{
+            opacity: 1;
+        }
+    }
+}
