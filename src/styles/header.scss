@@ -5,13 +5,14 @@
     justify-content: space-around;
     background-color: v.$bg;
     .header__logo{
-        color: #CCC;
+        color: #fff;
+        opacity: 0.5;
         font-size: 24px;
         cursor: pointer;
         transition: all .3s ease;
     }
     .header__logo:hover{
-        color: #fff;
+        opacity: 1;
     }
     .header__media{
         display: flex;
