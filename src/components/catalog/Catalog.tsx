@@ -23,7 +23,7 @@ export default function Catalog(){
             <h2 className='catalog__subtitle'>Catalog</h2>
             <div className='catalog__product'>
                 {products.map((product) =>(
-                    <div key={product.id}>{product.img} {product.title}. {product.cost}</div>
+                    <div key={product.id}> {product.title}. {product.cost}</div>
                 ))}
             </div>
         </div>
