@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 
 export default function Catalog(){
-    // constants
+
     const products = useCatalogStore(state => state.products);
     const fetchProducts = useCatalogStore(state => state.fetchProducts)
 
@@ -23,7 +23,13 @@ export default function Catalog(){
             <h2 className='catalog__subtitle'>Catalog</h2>
             <div className='catalog__product'>
                 {products.map((product) =>(
-                    <div key={product.id}> {product.title}. {product.cost}</div>
+                    <div className='product__item' key={product.id}>
+                        <div className='item__media'>
+                            <h2 className='item__subtitle'>{product.title}.</h2>
+                            <p className='item__cost'>{product.cost}</p>
+                        </div>
+                        <button className='item__add'>Add to cart</button>
+                    </div>
                 ))}
             </div>
         </div>

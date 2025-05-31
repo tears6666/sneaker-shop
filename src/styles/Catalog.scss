@@ -15,4 +15,40 @@
     .catalog__subtitle:hover{
         opacity: 1;
     }
+    .catalog__product{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+        
+
+        .product__item{
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 200px;
+            padding: 1rem;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            .item__subtitle{
+                color: #fff;
+                font-size: 16px;
+                opacity: 0.5;
+            }
+            .item__cost{
+                color: #fff;
+                opacity: 0.5;
+            }
+            .item__add{
+                opacity: 0.5;
+                color: #fff;
+                background: none;
+                border: 1px solid #fff;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+        }
+    }
 }
