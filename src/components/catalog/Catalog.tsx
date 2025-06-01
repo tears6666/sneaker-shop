@@ -1,9 +1,15 @@
 import '../../styles/Catalog.scss'
 import { useCatalogStore } from '../../store/store'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 export default function Catalog(){
+
+    const [isInCart, setIsInCart] = useState(false);
+
+    function handleClick(){
+        setIsInCart(prevIsCliked => !prevIsCliked)
+    }
 
     const products = useCatalogStore(state => state.products);
     const fetchProducts = useCatalogStore(state => state.fetchProducts)
@@ -28,7 +34,9 @@ export default function Catalog(){
                             <h2 className='item__subtitle'>{product.title}.</h2>
                             <p className='item__cost'>{product.cost}</p>
                         </div>
-                        <button className='item__add'>Add to cart</button>
+                        <button className='item__add' onClick={handleClick}>
+                            <p className='add__text'>{isInCart ? 'In cart' : 'Add in cart'}</p>
+                        </button>
                     </div>
                 ))}
             </div>
