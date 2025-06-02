@@ -1,19 +1,11 @@
 import '../../styles/Catalog.scss'
 import { useCatalogStore } from '../../store/store'
-import { useEffect, useState } from 'react';
-
+import { useEffect } from 'react';
+import { AddToCart } from '../../features/addToCart/AddToCart';
 
 export default function Catalog(){
-
-    const [isInCart, setIsInCart] = useState(false);
-
-    function handleClick(){
-        setIsInCart(prevIsCliked => !prevIsCliked)
-    }
-
     const products = useCatalogStore(state => state.products);
     const fetchProducts = useCatalogStore(state => state.fetchProducts)
-
 
     useEffect(() => {
         try{
@@ -22,7 +14,6 @@ export default function Catalog(){
             console.log('Fatal error:', error)
         }
     }, [fetchProducts])
-    
     
     return(
         <div className='catalog'>
@@ -34,9 +25,7 @@ export default function Catalog(){
                             <h2 className='item__subtitle'>{product.title}.</h2>
                             <p className='item__cost'>{product.cost}</p>
                         </div>
-                        <button className='item__add' onClick={handleClick}>
-                            <p className='add__text'>{isInCart ? 'In cart' : 'Add in cart'}</p>
-                        </button>
+                        <AddToCart />
                     </div>
                 ))}
             </div>
