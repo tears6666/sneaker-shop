@@ -1,7 +1,7 @@
 import '../../styles/Catalog.scss'
 import { useCatalogStore } from '../../store/store'
 import { useEffect } from 'react';
-import { AddToCart } from '../../features/addToCart/AddToCart';
+import { AddBtn } from '../../features/addBtn/addBtn';
 
 export default function Catalog(){
     const products = useCatalogStore(state => state.products);
@@ -25,7 +25,7 @@ export default function Catalog(){
                             <h2 className='item__subtitle'>{product.title}.</h2>
                             <p className='item__cost'>{product.cost}</p>
                         </div>
-                        <AddToCart />
+                        <AddBtn />
                     </div>
                 ))}
             </div>

@@ -13,7 +13,6 @@ interface ProductsState{
     fetchProducts: () => void,
 }
 
-
 export const useCatalogStore = create<ProductsState>()((set) => ({
     products: [],
     isLoading: false,

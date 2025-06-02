@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../../styles/AddToCart.scss'
 
-export const AddToCart = () =>{
+export const AddBtn = () => {
     const [isInCart, setIsInCart] = useState(false)
 
     const handleClick = () =>{

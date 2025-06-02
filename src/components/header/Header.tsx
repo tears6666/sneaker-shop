@@ -2,6 +2,10 @@ import '../../styles/Header.scss'
 import User from '../../img/user-fill.svg'
 import Basket from '../../img/shopping-basket-fill.svg'
 import { useState } from 'react'
+import { Cart } from '../../features/cart/Cart'
+
+
+
 export default function Header(){
     let [cartOpen, setCartOpen] = useState(false)
     return(
@@ -12,12 +16,7 @@ export default function Header(){
                 <img className='media__user' src={User} alt="user-logo" />
             </div>
             {cartOpen && (
-                <div className='open-cart'>
-                    <h2 className='cart__subtitle'>Cart</h2>
-                    <div className='cart__inner'>
-                        <p className='inner__text'>Cart is empty.</p>
-                    </div>
-                </div>
+                <Cart />
             )}
         </header>
     )
