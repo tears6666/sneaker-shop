@@ -1,0 +1,47 @@
+@use '../../app/styles/Variebles.scss' as v;
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem;
+  .header__logo{
+    color: v.$textCL;
+    opacity: .7;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+  .header__logo:hover{
+    opacity: 1;
+  }
+  .header__nav{
+    .nav__list{
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      #first{
+        opacity: 1;
+      }
+      .list__item{
+        color: v.$textCL;
+        cursor: pointer;
+        opacity: .7;
+        transition: all .3s ease;
+      }
+      .list__item:hover{
+        opacity: 1;
+      }
+    }
+  }
+  .header__basket{
+    color: v.$textCL;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: .7;
+    transition: all .3s ease;
+  }
+  .header__basket:hover{
+    opacity: 1;
+  }
+}

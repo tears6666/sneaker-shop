@@ -1,25 +1,26 @@
 import { create } from 'zustand';
 
-interface Product {
-    id: number,
-    title: string,
-    cost: string
+
+interface IProduct {
+	id: number
+	title: string
+	cost: string
 }
 
-interface ProductsState{
-    products: Product[],
-    isLoading: boolean,
-    errors: string[]
-    fetchProducts: () => void,
+interface IProductState {
+	products: IProduct[]
+	isLoading: boolean
+	errors: string[]
+	fetchProds: () => void
 }
 
-export const useCatalogStore = create<ProductsState>()((set) => ({
-    products: [],
-    isLoading: false,
-    errors: [],
-    fetchProducts: async () => {
-        const response = await fetch('http://localhost:3000/products')
-        const json = await response.json() as Product[];
-        set({products: json})
-    }
+export const useCatalogStore = create<IProductState>()(set => ({
+	products: [],
+	isLoading: true,
+	errors: [],
+	fetchProds: async () => {
+		const response = await fetch('http://localhost:3000/products')
+		const data = (await response.json()) as IProduct[]
+		set({ products: data })
+	},
 }))

@@ -1,0 +1,12 @@
+@use '../../app/styles/Variebles.scss' as v;
+
+
+.catalog{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  .catalog__subtitle{
+    color: v.$textCL;
+    font-size: 35px;
+  }
+}
