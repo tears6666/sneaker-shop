@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 3rem;
+  border-bottom: 1px dotted v.$textCL;
   .header__logo{
     color: v.$textCL;
     opacity: .7;

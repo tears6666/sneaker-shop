@@ -1,34 +1,52 @@
 {
     "products":[
-        {
-            "id": 1,
-            "title": "Adidas Forum Low Bad Bunny Back To School", 
-            "cost": "249$"
-        },
-        {
-            "id": 2,
-             "title": "Nike Air Force 1 Low '07 White Gum",
-              "cost": "149$"
-        },
-        {
-            "id": 3,
-            "title": "Nike P-6000 Metallic Silver",
-            "cost": "104$"
-        },
-        {
-            "id": 4, 
-            "title": "Nike Cpfm Flea 1 Cactus Plant Flea Market Overgrown", 
-            "cost": "1005$"
-        },
-        {
-            "id": 5, 
-            "title": "Nike Air Max Plus Triple Black", 
-            "cost": "177$"
-        },
-        {
-            "id": 6, 
-            "title": "Nike SB Dunk Low StrangeLove", 
-            "cost": "1061$"
-        }
-    ]
+			{
+				"id": 1,
+				"title": "Adidas Forum Low Bad Bunny Back To School",
+				"cost": "249$",
+				"img": "../src/img/adid.webp",
+				"width": "200px",
+				"height": "200px"
+			},
+			{
+				"id": 2,
+				"title": "Nike Air Force 1 Low '07 White Gum",
+				"cost": "149$",
+				"img": "../src/img/force-gum.webp",
+				"width": "200px",
+				"height": "200px"
+			},
+			{
+				"id": 3,
+				"title": "Nike P-6000 Metallic Silver",
+				"cost": "104$",
+				"img": "../src/img/p6.webp",
+				"width": "200px",
+				"height": "200px"
+			},
+			{
+				"id": 4,
+				"title": "Jordan Air Jordan 1",
+				"cost": "1005$",
+				"img": "../src/img/jor.webp",
+				"width": "200px",
+				"height": "200px"
+			},
+			{
+				"id": 5,
+				"title": "Nike Air Max Plus Triple Black",
+				"cost": "177$",
+				"img": "../src/img/max.webp",
+				"width": "200px",
+				"height": "200px"
+			},
+			{
+				"id": 6,
+				"title": "NIKE Dunk SB",
+				"cost": "1061$",
+				"img": "../src/img/sb.webp",
+				"width": "200px",
+				"height": "200px"
+			}
+		]
 }

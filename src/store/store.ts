@@ -5,6 +5,9 @@ interface IProduct {
 	id: number
 	title: string
 	cost: string
+	img: string
+	width: string
+	height: string
 }
 
 interface IProductState {
